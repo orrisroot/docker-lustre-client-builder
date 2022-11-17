@@ -21,9 +21,9 @@ case $1 in
   rocky*-8)
     docker run --cap-add SYS_ADMIN -it --rm --name r8 -v $(pwd)/work:/work docker.io/library/rockylinux:8 /bin/bash /work/build.sh
     ;;
-  #rocky*-9)
-  #  docker run --cap-add SYS_ADMIN -it --rm --name r9 -v $(pwd)/work:/work docker.io/library/rockylinux:9 /bin/bash /work/build.sh
-  #  ;;
+  rocky*-9)
+    docker run --cap-add SYS_ADMIN -it --rm --name r9 -v $(pwd)/work:/work docker.io/library/rockylinux:9 /bin/bash /work/build.sh
+    ;;
   centos-stream-8)
     docker run --cap-add SYS_ADMIN -it --rm --name cs8 -v $(pwd)/work:/work quay.io/centos/centos:stream8 /bin/bash /work/build.sh
     ;;
