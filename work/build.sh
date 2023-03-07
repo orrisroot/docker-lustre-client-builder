@@ -36,7 +36,7 @@ case "${SYSTEM_ID}" in
       pushd $(basename "${LUSTRE_SOURCE}" .tar.gz)
     else
       yum install -y git
-      git clone --branch b2_12 git://git.whamcloud.com/fs/lustre-release.git
+      git clone --branch b2_12 --depth 1 git://git.whamcloud.com/fs/lustre-release.git
       pushd lustre-release
     fi
     sh ./autogen.sh
@@ -74,7 +74,7 @@ case "${SYSTEM_ID}" in
       pushd $(basename "${LUSTRE_SOURCE}" .tar.gz)
     else
       dnf install -y git
-      git clone --branch b2_12 git://git.whamcloud.com/fs/lustre-release.git
+      git clone --branch b2_12 --depth 1 git://git.whamcloud.com/fs/lustre-release.git
       pushd lustre-release
     fi
     sh ./autogen.sh
@@ -114,7 +114,7 @@ case "${SYSTEM_ID}" in
     #  pushd $(basename "${LUSTRE_SOURCE}" .tar.gz)
     #else
       dnf install -y git
-      git clone --branch b2_15 git://git.whamcloud.com/fs/lustre-release.git
+      git clone --branch b2_15 --depth 1 git://git.whamcloud.com/fs/lustre-release.git
       pushd lustre-release
     #fi
     sh ./autogen.sh
@@ -152,7 +152,7 @@ case "${SYSTEM_ID}" in
       pushd $(basename "${LUSTRE_SOURCE}" .tar.gz)
     else
       apt install -y git
-      git clone --branch b2_12 git://git.whamcloud.com/fs/lustre-release.git
+      git clone --branch b2_12 --depth 1 git://git.whamcloud.com/fs/lustre-release.git
       pushd lustre-release
     fi
     sh ./autogen.sh
